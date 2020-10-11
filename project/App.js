@@ -11,6 +11,7 @@ import Screen1 from './pages/Screen1';
 import Screen2 from './pages/Screen2';
 import Screen3 from './pages/Screen3';
 import Screen4 from './pages/Screen4';
+import Screen5 from './pages/Screen5';
 import ScreenExternal from './pages/ScreenExternal';
 import ScreenInternal from './pages/ScreenInternal';
 
@@ -113,6 +114,22 @@ const Screen4_StackNavigator = createStackNavigator({
     }),
   },
 });
+const Screen5_StackNavigator = createStackNavigator({
+  Third: {
+    screen: Screen5,
+    navigationOptions: ({navigation}) => ({
+      title: 'Booking',
+      headerLeft: () => (
+        <NavigationDrawerStructure navigationProps={navigation} />
+      ),
+
+      headerStyle: {
+        backgroundColor: '#FF9800',
+      },
+      headerTintColor: '#fff',
+    }),
+  },
+});
 
 const Drawer = createDrawerNavigator({
   Screen1: {
@@ -139,6 +156,12 @@ const Drawer = createDrawerNavigator({
     screen: Screen4_StackNavigator,
     navigationOptions: {
       drawerLabel: 'Packget',
+    },
+  },
+  Screen5: {
+    screen: Screen5_StackNavigator,
+    navigationOptions: {
+      drawerLabel: 'Booking',
     },
   },
 });
