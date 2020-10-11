@@ -10,6 +10,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import Screen1 from './pages/Screen1';
 import Screen2 from './pages/Screen2';
 import Screen3 from './pages/Screen3';
+import Screen4 from './pages/Screen4';
 import ScreenExternal from './pages/ScreenExternal';
 import ScreenInternal from './pages/ScreenInternal';
 
@@ -96,6 +97,23 @@ const Screen3_StackNavigator = createStackNavigator({
   },
 });
 
+const Screen4_StackNavigator = createStackNavigator({
+  Third: {
+    screen: Screen4,
+    navigationOptions: ({navigation}) => ({
+      title: 'Packget',
+      headerLeft: () => (
+        <NavigationDrawerStructure navigationProps={navigation} />
+      ),
+
+      headerStyle: {
+        backgroundColor: '#FF9800',
+      },
+      headerTintColor: '#fff',
+    }),
+  },
+});
+
 const Drawer = createDrawerNavigator({
   Screen1: {
     screen: FirstActivity_StackNavigator,
@@ -115,6 +133,12 @@ const Drawer = createDrawerNavigator({
     screen: Screen3_StackNavigator,
     navigationOptions: {
       drawerLabel: 'Customer',
+    },
+  },
+  Screen4: {
+    screen: Screen4_StackNavigator,
+    navigationOptions: {
+      drawerLabel: 'Packget',
     },
   },
 });

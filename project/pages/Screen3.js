@@ -18,7 +18,7 @@ export default class ExampleOne extends Component {
     this.state = {
       tableHead: ['CID', 'GTour', 'BTour', 'Lunch', 'Dinner', 'Date'],
       tableData: [
-        [' 1002', '1', '1,', '1', '1', '12/10/2020'],
+        [' 1002', '1', '1', '1', '1', '12/10/2020'],
         ['1005', '1', '0', '1', '0', '13/10/2020'],
       ],
     };

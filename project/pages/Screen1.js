@@ -7,7 +7,10 @@ export default class Screen1 extends Component {
     return (
       <View style={styles.MainContainer}>
         <Text style={{fontSize: 23}}> Forest Tour </Text>
-
+        <Text style={{fontSize: 20}}>
+          {' '}
+          วิสาหกิจชุมชนกลุ่มอนุรักษ์ป่าชายเลนบ้านแหลมโฮมสเตย{' '}
+        </Text>
         {/* <Button
           title="Go to Other Screen out of the Navigation Drawer"
           onPress={() => this.props.navigation.navigate('ScreenExternal')}
