@@ -21,6 +21,7 @@ export default class ExampleOne extends Component {
     const state = this.state;
     return (
       <View style={styles.container}>
+        <Text style={{fontSize: 23}}> TABLE STAFF </Text>
         <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
           <Row
             data={state.tableHead}
